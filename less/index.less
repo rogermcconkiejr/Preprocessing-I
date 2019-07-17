@@ -54,6 +54,169 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size:62.5%;
+}
+/* Variables */
+@color:#DCDCDC;
+
+@font-color: #9400D3;
+
+
+/* Mixins */
+.bordermix(){
+	border:1px solid black;
 }
 
+.navmix(){
+	display:flex;
+	justify-content:flex-end;
+	margin:5%;
+}
+
+.centermix(){
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+/* Code starts here */
+
+.container{
+width:100%;
+background:lightcoral;
+.centermix();
+} /*container ends here */
+	header{
+		width:100%;
+		
+		
+
+		nav{
+			.navmix();
+			margin:2%;
+			background: @color;
+			@media( max-width: 500px ) {
+				display:flex;
+				justify-content:space-evenly;
+			  }
+				a{
+					margin:30px;
+					font-size:1.6rem;
+					text-decoration:none;
+					margin-top:20px;
+					color:@font-color;
+					@media( max-width: 500px ) {
+						margin:10px;
+					  }
+				}/*a tag ends here*/
+		}/*nav tag ends here*/
+	}/*header tag ends here*/
+
+	.alltopcontent{
+	width:100%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+
+	@media( max-width: 500px ) {
+		display: flex;
+		flex-direction:column;
+	  }
+
+
+		.topcontent{
+			margin:5%;
+			width:45%;
+			padding:5%;
+			background: @color;
+	
+			
+			display:flex;
+			justify-content: center;
+
+			.topcontent2{
+				.centermix();
+				
+
+				h1{
+					font-size:3rem;
+					color:@font-color;
+					margin:5px;
+				}
+				p{
+					font-size:1.6rem;
+					margin:5px;
+				}
+			}/*topcontent2 ends here */
+
+			
+		}/*topcontent ends here */
+
+		.topcontentb{
+			
+			width:45%;
+			margin:5%;
+			padding:5%;
+			
+			display:flex;
+			justify-content: center;
+			font-size:1.6rem;
+			background: @color;
+		}
+		h2{
+			margin:10px;
+			font-size:2rem;
+			color:@font-color;
+		}
+		ul{
+			line-height:17px;
+			margin:5px;
+		}
+	} /*alltopcontent ends here */
+
+	.bottomcontent{
+		width:100%;
+		margin:5%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+
+		table{
+			border:1px solid grey;
+			font-size:1.6rem;
+			width:75%;
+			background: @color;
+			position:relative;
+			left:-75px;
+
+			@media( max-width: 500px ) {
+				display:none;
+			  }
+
+			
+
+
+			th{
+				height: 20px;
+				font-size: 2rem;
+				color:@font-color;
+				
+			}
+
+			td{
+				text-align:center;
+			}
+		}/*table ends here */
+		
+	} /*bottomcontent ends here */
+
+	footer{
+		width:100%;
+		display:flex;
+		justify-content:space-evenly;
+
+		p{
+			font-size:1.4rem;
+			margin-bottom:20px;
+		}
+	} /*Footer ends here */
